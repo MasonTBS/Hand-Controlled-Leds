@@ -78,7 +78,7 @@ while True:
     FPS, t_FPS_prev = calculate_FPS(t_FPS_prev)
     # Reads frames from the camera
     check, img = cap.read()
-    check2, img2 = cap2.read()
+    # check2, img2 = cap2.read()
     # Changes the format of the frames from BGR to RGB
     imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     # Print a pink rectangle that limits the uable mouse region
@@ -106,7 +106,7 @@ while True:
     img = cv2.resize(img, (1280, 720))
     # img2 = cv2.resize(img2, (360, 240))
     cv2.imshow("Webcam", img)
-    cv2.imshow("camera", img2)
+    # cv2.imshow("camera", img2)
     if cv2.waitKey(10) & 0xFF == ord('q'):  # Closes the window if Q is pressed
         break
 
